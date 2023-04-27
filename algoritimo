@@ -1,0 +1,36 @@
+nome = input('Nome: ')
+idade = int(input('Idade: '))
+grupo = input('Grupo [B]aixa, [M]edia, [A]lta: ')
+cat = 0
+if idade >= 17 and idade <= 70:
+    if idade <= 20:
+        B = 1
+        M = 2
+        A = 3
+    elif idade <= 24: 
+        B = 2
+        M = 3
+        A = 4
+    elif idade <= 34: 
+        B = 3
+        M = 4
+        A = 5
+    elif idade <= 64: 
+        B = 4
+        M = 5
+        A = 6
+    else: 
+        B = 7
+        M = 8
+        A = 9
+    if grupo == 'B':
+        cat = B
+    elif grupo == 'M':
+        cat = M
+    elif grupo == 'A':
+        cat = A
+
+if cat == 0:
+    print('Informação inválida')
+else:
+    print(f'Sua categoria é {cat}')
